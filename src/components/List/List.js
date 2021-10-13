@@ -22,9 +22,9 @@ class List extends React.Component {
           {this.props.children}
         </div>
         <div className={styles.columns}>
-          <Column columnText='Animals'>Animals</Column>
-          <Column columnText='Plants'>Plants</Column>
-          <Column columnText='Minerals'>Minerals</Column>
+          <Column columnText='Animals'></Column>
+          <Column columnText='Plants'></Column>
+          <Column columnText='Minerals'></Column>
         </div>
       </section>
     );
