@@ -11,6 +11,7 @@ import Card from '../Card/Card';
 class List extends React.Component {
   state = {
     columns: this.props.columns || [],
+    cards: PropTypes.array,
   };
 
   static propTypes = {
@@ -45,11 +46,13 @@ class List extends React.Component {
         <Hero titleText={this.props.title} backgroundImage={this.props.image} />
         <div className={styles.description}>{ReactHtmlParser(this.props.description)}
         </div>
+        
         <div className={styles.columns}>
           {this.state.columns.map(({key, ...columnProps}) => (
             <Column key={key} {...columnProps} />
           ))}
         </div>
+
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
         </div>

@@ -39,16 +39,22 @@ class Column extends React.Component {
 
   render() {
     // console.log('this', this);
-    const {title, icon, cards, addCard} = this.props;
+    const {cards} = this.props;
     return (
       <section className={styles.component} >
         <h3 className={styles.title}>{this.props.title} <span className={styles.icon}><Icon name={this.props.icon}/></span></h3>
         <Card className={styles.title} />
-        <div className={styles.title}>
+
+        <div className={styles.card}>
           {this.state.columns.map(({key, ...columnProps}) => (
             <Card key={key} {...columnProps} />
           ))}
         </div>
+
+        <div className={styles.card}>{cards.map(cardData => (<div key={''} className={styles.second__component}>
+          <Card key={cardData.id} {...cardData} /></div>))}
+        </div>
+
         <div className={styles.card}>
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
