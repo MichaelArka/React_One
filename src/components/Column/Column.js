@@ -51,7 +51,7 @@ class Column extends React.Component {
           ))}
         </div>
 
-        <div className={styles.card}>{cards.map(cardData => (<div key={''} className={styles.second__component}>
+        <div className={styles.card}>{cards.map((cardData, abc )=> (<div key={abc} className={styles.second__component}>
           <Card key={cardData.id} {...cardData} /></div>))}
         </div>
 
