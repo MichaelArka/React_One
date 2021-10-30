@@ -7,14 +7,14 @@ import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
   state = { 
-    cards: this.props.cards || [],
+    columns: this.props.columns || [],
   };
 
-  addCard(title){
+  addColumn(title){
     this.setState(state => (
       {
         columns: [
-          ...state.cards,
+          ...state.columns,
           {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
@@ -24,12 +24,14 @@ class Column extends React.Component {
         ]
       }
     ));
-  };
+  }
 
   render() {
+    console.log('props', this.props);
     return (
       <section className={styles.component} >
-        <h3 className={styles.title}>{this.props.title}<span className={styles.icon}/> <Icon name={this.props.icon} /></h3>
+        <h3 className={styles.title}>{this.props.title} <span className={styles.icon}><Icon name={this.props.icon}/></span></h3>
+        <Card className={styles.title} />
         <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={title => this.addColumn(title)}/>
         </div>
