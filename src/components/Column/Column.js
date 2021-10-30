@@ -59,13 +59,13 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
       </section>
-    ),
+    );
   }
-};
+}
 
 Column.propTypes = {
-  columns: PropTypes.string.isRequired,
-  cards: PropTypes.string.isRequired,
+  columns: PropTypes.string,
+  cards: PropTypes.array,
   title: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
 };
