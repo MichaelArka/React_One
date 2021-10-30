@@ -30,9 +30,9 @@ class Column extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
@@ -51,7 +51,7 @@ class Column extends React.Component {
           ))}
         </div>
 
-        <div className={styles.card}>{cards.map((cardData, column_style_key)=> (<div key={column_style_key} className={styles.second__component}>
+        <div className={styles.card}>{cards.map((cardData, abc )=> (<div key={abc} className={styles.second__component}>
           <Card key={cardData.id} {...cardData} /></div>))}
         </div>
 
@@ -59,8 +59,15 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
       </section>
-    );
-  };
+    ),
+  }
+};
+
+Column.propTypes = {
+  columns: PropTypes.string.isRequired,
+  cards: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 export default Column;
