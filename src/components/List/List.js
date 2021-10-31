@@ -10,7 +10,6 @@ import Creator from '../Creator/Creator';
 class List extends React.Component {
   state = {
     columns: this.props.columns || [],
-    cards: PropTypes.array,
   };
 
   static propTypes = {
@@ -57,7 +56,14 @@ class List extends React.Component {
         </div>
       </section>
     );
-  };
+  }
+}
+
+List.propTypes = {
+  title: PropTypes.node,
+  image: PropTypes.node,
+  description: PropTypes.node,
+  columns: PropTypes.array,
 };
 
 export default List;

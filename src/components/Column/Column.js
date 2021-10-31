@@ -8,26 +8,22 @@ import PropTypes from 'prop-types';
 
 class Column extends React.Component {
   state = { 
-    columns: this.props.columns || [],
+    cards: this.props.cards || [],
   };
 
   static propTypes = {
     title: PropTypes.node.isRequired,
-    description: PropTypes.node,
-    columns: PropTypes.array,
+    cards: PropTypes.node,
+    addCard: PropTypes.func,
   };
 
-  static defaultProps = {
-    description: settings.defaultListDescription,
-  };
-
-  addCard(title){
+  addCard(title) {
     this.setState(state => (
       {
-        columns: [
-          ...state.columns,
+        cards: [
+          ...state.cards,
           {
-            key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
+            key: state.cards.length ? state.cards[state.cards.length - 1].key + 1 : 0,
             title,
             icon: 'list-alt',
             cards: [],
@@ -38,24 +34,17 @@ class Column extends React.Component {
   }
 
   render() {
-    // console.log('this', this);
-    const {cards} = this.props;
     return (
       <section className={styles.component} >
         <h3 className={styles.title}>{this.props.title} <span className={styles.icon}><Icon name={this.props.icon}/></span></h3>
-        <Card className={styles.title} />
 
-        <div className={styles.card}>
-          {this.state.columns.map(({key, ...columnProps}) => (
-            <Card key={key} {...columnProps} />
+        <div className={styles.cards}>
+          {this.state.cards.map(cardData => (
+            <Card key={cardData.id} {...cardData} />
           ))}
         </div>
 
-        <div className={styles.card}>{cards.map((cardData, abc )=> (<div key={abc} className={styles.second__component}>
-          <Card key={cardData.id} {...cardData} /></div>))}
-        </div>
-
-        <div className={styles.card}>
+        <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
       </section>
@@ -64,10 +53,9 @@ class Column extends React.Component {
 }
 
 Column.propTypes = {
-  columns: PropTypes.string,
   cards: PropTypes.array,
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
 };
 
 export default Column;
