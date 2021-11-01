@@ -14,4 +14,8 @@ Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
 };
 
+Hero.propTypes = {
+  backgroundImage: PropTypes.any,
+};
+
 export default Hero;
