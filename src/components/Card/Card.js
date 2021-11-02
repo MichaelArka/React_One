@@ -3,14 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
-
   static propTypes = {
     title: PropTypes.string,
   };
 
   render() {
+    const {title} = this.props;
     return (
-      <section className={styles.component}><h3 className={styles.title}>{this.props.title}</h3>
+      <section className={styles.component}><h3 className={styles.title}>{title}</h3>
       </section>
     );
   }

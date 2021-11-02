@@ -2,16 +2,12 @@ import React from 'react';
 import Hero from '../Hero/Hero';
 import styles from './List.scss';
 import PropTypes from 'prop-types';
-import Column from '../Column/Column';
+import Column from '../Column/ColumnContainer';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
-import Creator from '../Creator/Creator';
+// import Creator from '../Creator/Creator';
 
 class List extends React.Component {
-  state = {
-    columns: this.props.columns || [],
-  };
-
   static propTypes = {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
@@ -22,38 +18,23 @@ class List extends React.Component {
     description: settings.defaultListDescription,
   };
 
-  addColumn(title){
-    this.setState(state => (
-      {
-        columns: [
-          ...state.columns,
-          {
-            key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
-            title,
-            icon: 'list-alt',
-            cards: [],
-          },
-        ],
-      }
-    ));
-  }
-
   render() {
+    const {title, image, description, columns} = this.props;
     return (
       <section className={styles.component} >
-        <Hero titleText={this.props.title} backgroundImage={this.props.image} />
-        <div className={styles.description}>{ReactHtmlParser(this.props.description)}
+        <Hero titleText={title} backgroundImage={image} />
+        <div className={styles.description}>{ReactHtmlParser(description)}
         </div>
         
         <div className={styles.columns}>
-          {this.state.columns.map(({key, ...columnProps}) => (
-            <Column key={key} {...columnProps} />
+          {columns.map(columnData => (
+            <Column key={columnData.id} {...columnData} />
           ))}
         </div>
 
-        <div className={styles.creator}>
+        {/* <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
-        </div>
+        </div> */}
       </section>
     );
   }
