@@ -1,17 +1,17 @@
 import React from 'react';
 import styles from './Column.scss';
-// import {settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 // import Creator from '../Creator/Creator';
 import Card from '../Card/Card';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 
 class Column extends React.Component {
-
   static propTypes = {
     title: PropTypes.node.isRequired,
     cards: PropTypes.node,
     addCard: PropTypes.func,
+    icon: settings.defaultColumnIcon,
   };
 
   render() {
@@ -33,11 +33,5 @@ class Column extends React.Component {
     );
   }
 }
-
-Column.propTypes = {
-  cards: PropTypes.array,
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string,
-};
 
 export default Column;

@@ -4,10 +4,9 @@
      "browser": true,
      "node": true
   },
-  "parser": "@babel/eslint-parser",
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
-    "requireConfigFile": false,
     "sourceType": "module",
     "ecmaFeatures": {
         "jsx": true

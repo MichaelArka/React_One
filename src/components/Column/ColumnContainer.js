@@ -1,4 +1,3 @@
-
 import {connect} from 'react-redux';
 import Column from './Column';
 
