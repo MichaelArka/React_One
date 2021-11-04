@@ -13,6 +13,7 @@ class List extends React.Component {
     description: PropTypes.node,
     columns: PropTypes.array,
     addColumn: PropTypes.func,
+    image: PropTypes.node,
   };
 
   static defaultProps = {
@@ -37,18 +38,9 @@ class List extends React.Component {
           <Creator text={settings.columnCreatorText} action={addColumn}/>
         </div>
 
-
       </section>
     );
   }
 }
-
-List.propTypes = {
-  title: PropTypes.node,
-  image: PropTypes.node,
-  description: PropTypes.node,
-  columns: PropTypes.array,
-  addColumn: PropTypes.func,
-};
 
 export default List;

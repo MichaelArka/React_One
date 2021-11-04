@@ -16,8 +16,4 @@ class Card extends React.Component {
   }
 }
 
-Card.propTypes = {
-  title: PropTypes.string,
-};
-
 export default Card;
