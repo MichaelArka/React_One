@@ -1,7 +1,7 @@
 
 // selectors
 export const getSearchString = state => state.searchString;
-export const countVisibleCards = ({cards, searchString}) => cards.filter(card => new RegExp(searchString, 'i').test(card.title));
+export const countVisibleCards = ({cards, searchString}) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).length;
 export const countAllCards = ({cards}) => cards.length;
 
 // action name creator
