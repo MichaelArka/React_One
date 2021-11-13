@@ -10,6 +10,7 @@ export const settings = {
     defaultText: 'Search...',
     icon: 'search',
   },
+  nav__icon: 'skull-crossbones',
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
 };
@@ -140,6 +141,20 @@ const cards = [
     title: 'Skyrim',
   },
 ];
+
+export const FAQ__data = {
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  h1__content: '<h1>16.8. Egzamin sprawdzający</h1>',
+  p__content: 'Minęła już spora część kursu, po której warto sprawdzić swoją wiedzę. W związku z tym zapraszamy Cię do wzięcia udziału w egzaminie sprawdzającym. Zakres materiału na egzaminie nie obejmuje Reacta!<br/>W ramach Twojego pakietu wsparcia w poszukiwaniu pracy, podejście do egzaminu sprawdzającego jest opcjonalne.<br/>Egzamin ten ma na celu sprawdzenie, jaki masz aktualny poziom wiedzy, co nie stanowi już dla Ciebie problemu, a co ewentualnie wymaga powtórzenia.Potraktuj go jako rodzaj treningu, który przygotuje Cię do zdania egzaminu końcowego z jak najlepszym wynikiem.',
+  defaultListDescription: '<p>I can do all the things!!!</p>',
+  title: 'Things to do <sup>soon!</sup>',
+  description: 'Interesting things I want to check out!',
+};
+
+export const Info__data = {
+  h2__content: '<h2>Info</h2>',
+  p__content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+};
 
 const initialStoreData = {
   app: {...pageContents},
