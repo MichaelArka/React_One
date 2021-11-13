@@ -80,6 +80,24 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Cosmos',
+    description: 'Interesting things I want to check out!',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.answersingenesis.org%2Fimg%2Fcms%2Fcontent%2Fcontentnode%2Fheader_image%2Fcosmos-campaign.jpg&f=1&nofb=1',
+  },
+  {
+    id: 'list-3',
+    title: 'Cosmonaut',
+    description: 'Interesting things I want to check out!',
+    image: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fblog.deonandan.com%2Fwordpress%2Fwp-content%2Fuploads%2Fcosmonaut.jpg&f=1&nofb=1',
+  },
+  {
+    id: 'list-4',
+    title: 'Sun',
+    description: 'Interesting things I want to check out!',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fspaceandbeyondbox.com%2Fwp-content%2Fuploads%2F2020%2F09%2Flifecyclesun.jpg&f=1&nofb=1',
+  },
 ];
 
 const columns = [
@@ -104,6 +122,36 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-2',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-5',
+    listId: 'list-2',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-6',
+    listId: 'list-2',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-7',
+    listId: 'list-3',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-8',
+    listId: 'list-3',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-9',
+    listId: 'list-3',
     title: 'Strange column',
     icon: 'question',
   },
