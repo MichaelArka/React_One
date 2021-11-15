@@ -7,7 +7,7 @@ import styles from './SearchResults.scss';
 
 class SearchResults extends React.Component {
   static propTypes = {
-    title: PropTypes.node.isRequired,
+    title: PropTypes.string,
     cards: PropTypes.array,
     addCard: PropTypes.func,
     icon: PropTypes.string.isRequired,
