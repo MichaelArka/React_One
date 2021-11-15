@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './Column.scss';
 import {settings} from '../../data/dataStore';
 import Card from '../Card/Card';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
+import styles from './SearchResults.scss';
 
 class SearchResults extends React.Component {
   static propTypes = {

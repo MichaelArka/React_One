@@ -14,7 +14,7 @@ const Info = () => {
       </div>
       <div>
         <div className={styles.h2}>{ReactHtmlParser(h2Content)}</div>
-        <div className={styles.paragraf}>{ReactHtmlParser(pContent)}</div>
+        <div className={styles.paragraph}>{ReactHtmlParser(pContent)}</div>
       </div>
     </Container>
   );

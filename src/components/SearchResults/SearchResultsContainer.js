@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import SearchResults from './SearchResults';
 
 const mapStateToProps = (state, props) => {
-  const searchString = props.state.split();
+  const searchString = props.match.params.id;
 
   return {
     cards: getCardsForSearchResults(state, searchString),
