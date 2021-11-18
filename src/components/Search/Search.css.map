@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;CAWd;;AAbD,AAIE,UAJQ,CAIR,KAAK,CAAC;EAEJ,UAAU,ECRA,IAAI;EDSd,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,OAAyB;EAC3C,OAAO,ECFC,IAAI,CDEQ,IAAkB;EACtC,MAAM,EAAE,CAAC,CAAC,CAAC,CCHH,IAAI,CDGW,CAAC;EACxB,WAAW,ECPH,SAAS,EAAE,UAAU;EDQ7B,aAAa,ECNR,GAAG;CDOT",
+    "sources": [
+        "Search.scss",
+        "../../styles/settings.scss"
+    ],
+    "names": [],
+    "file": "Search.css"
+}

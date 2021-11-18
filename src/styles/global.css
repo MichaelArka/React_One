@@ -12,6 +12,7 @@ body {
   font-size: 13.2px;
   color: #fff;
   letter-spacing: 0.5px;
+  overflow-y: scroll;
 }
 
 :global(.container) {
