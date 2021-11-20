@@ -1,13 +1,11 @@
 import shortid from 'shortid';
 
 // selectors
-export const getCardsForColumn = ({ cards }, columnId) => cards.filter((card) => card.columnId == columnId &&
- new RegExp('').test(card.title)); 
+export const getCardsForColumn = ({ cards }, columnId) => cards.filter((card) => card.columnId == columnId); 
 
 export const getCardsForSearchResults = ({cards}, searchString) => cards.filter(card => 
   new RegExp(searchString, 'i').test(card.title));
 
-// Remove RegExp 'i' from "getCardsForColumn" because it only shows the words with 'i' letter .
 // Add  RegExp 'i' to "getCardsForSearchResults" <-- that parameter(flag) ignore letter size.
 
 // action name creator
